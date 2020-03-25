@@ -6,8 +6,6 @@ namespace BaseImplementation
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
-
             var concreteSubject = new ConcreteSubject();
             var observer1 = new ConcreteObserver("Observer 1");
             var observer2 = new ConcreteObserver("Observer 2");
