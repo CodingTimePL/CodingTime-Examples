@@ -6,6 +6,8 @@
     <e p="$PROJECT_DIR$" t="IncludeFlat">
       <e p="BaseImplementation" t="IncludeRecursive">
         <e p="BaseImplementation.csproj" t="IncludeRecursive" />
+        <e p="ConcreteObserver.cs" t="Include" />
+        <e p="ConcreteSubject.cs" t="Include" />
         <e p="IObserver.cs" t="Include" />
         <e p="ISubject.cs" t="Include" />
         <e p="Program.cs" t="Include" />
