@@ -4,7 +4,17 @@ namespace BaseImplementation
 {
     public class ConcreteSubject : ISubject
     {
-        List<IObserver> observers = new List<IObserver>();
+        public int ConcreteSubjectState
+        {
+            get => _concreteSubjectState;
+            set
+            {
+                _concreteSubjectState = value;
+                Notify();
+            }
+        }
+        private int _concreteSubjectState;
+
         
         public void Attach(IObserver observer)
         {
