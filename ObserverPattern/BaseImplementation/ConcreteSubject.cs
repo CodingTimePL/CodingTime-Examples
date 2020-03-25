@@ -15,20 +15,21 @@ namespace BaseImplementation
         }
         private int _concreteSubjectState;
 
+        private readonly List<IObserver> _observers = new List<IObserver>();
         
         public void Attach(IObserver observer)
         {
-            observers.Add(observer);
+            _observers.Add(observer);
         }
 
         public void Detach(IObserver observer)
         {
-            observers.Remove(observer);
+            _observers.Remove(observer);
         }
 
         public void Notify()
         {
-            foreach (var observer in observers)
+            foreach (var observer in _observers)
             {
                 observer.Update(this);
             }
