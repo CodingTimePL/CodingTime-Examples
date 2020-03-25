@@ -1,20 +1,27 @@
+using System.Collections.Generic;
+
 namespace BaseImplementation
 {
     public class ConcreteSubject : ISubject
     {
+        List<IObserver> observers = new List<IObserver>();
+        
         public void Attach(IObserver observer)
         {
-            throw new System.NotImplementedException();
+            observers.Add(observer);
         }
 
         public void Detach(IObserver observer)
         {
-            throw new System.NotImplementedException();
+            observers.Remove(observer);
         }
 
         public void Notify()
         {
-            throw new System.NotImplementedException();
+            foreach (var observer in observers)
+            {
+                observer.Update(this);
+            }
         }
     }
 }
